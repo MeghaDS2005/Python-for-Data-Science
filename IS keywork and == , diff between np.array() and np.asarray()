@@ -1,0 +1,368 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "6d3e2b6f",
+   "metadata": {},
+   "source": [
+    "# Difference between IS keywork and =="
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "0e760a06",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "True"
+      ]
+     },
+     "execution_count": 1,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "lst1=[\"Megha\", \"Mayank\", \"Neha\"]\n",
+    "lst2=[\"Megha\", \"Mayank\", \"Neha\"]\n",
+    "lst1==lst2"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "id": "53f54888",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "False"
+      ]
+     },
+     "execution_count": 2,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "lst1=[\"Megha\", \"Mayank\", \"Neha\"]\n",
+    "lst2=[\"Megh4\", \"Mayank\", \"Neha\"]\n",
+    "lst1==lst2"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "id": "7056fddd",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "False"
+      ]
+     },
+     "execution_count": 3,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "lst1 is lst2"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "id": "9c3692d4",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "True"
+      ]
+     },
+     "execution_count": 4,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "a=\"Megha\"\n",
+    "b=\"Megha\"\n",
+    "a==b"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "d49df1e3",
+   "metadata": {},
+   "source": [
+    "Here, 2 objects are created at 2 different memory locations and their values are compared whether they are equal/same or not."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "id": "ec8cc553",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "True"
+      ]
+     },
+     "execution_count": 5,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "lst1=[\"Megh4\", \"Mayank\", \"Neha\"]\n",
+    "lst1=lst2\n",
+    "lst1 is lst2"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "89f76e1e",
+   "metadata": {},
+   "source": [
+    "\n",
+    "Here, 2 objects are not created in the memory, only one object lst1 is created and the lst2 is reffering to lst1."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "a6517c3b",
+   "metadata": {},
+   "source": [
+    "# np.array in Python\n",
+    "The np.array() in Python is used to convert a list, tuple, etc. into a Numpy array."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "fd4f59c9",
+   "metadata": {},
+   "source": [
+    "# np.asarray in Python\n",
+    "\n",
+    "The numpy.asarray()function is used when we want to convert the input to an array. Input can be lists, lists of tuples, tuples, tuples of tuples, tuples of lists and arrays."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "88440be3",
+   "metadata": {},
+   "source": [
+    "# Numpy array VS Numpy asarray\n",
+    "In Python, NumPy array and NumPy asarray are used to convert the data into ndarray. If we talk about the major difference that is when we make a NumPy array using np.array, it creates a copy of the object array or the original array and does not reflect any changes made to the original array. Whereas on the other hand, when we try to use NumPy asarray, it would reflect all the changes made to the original array."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "id": "00a0e991",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "list"
+      ]
+     },
+     "execution_count": 6,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "lst=[1,2,3,4,5,6]\n",
+    "type(lst)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "id": "ea68ef28",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "application/javascript": [
+       "\n",
+       "        if (window._pyforest_update_imports_cell) { window._pyforest_update_imports_cell('import numpy as np'); }\n",
+       "    "
+      ],
+      "text/plain": [
+       "<IPython.core.display.Javascript object>"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    },
+    {
+     "data": {
+      "text/plain": [
+       "array([1, 2, 3, 4, 5, 6])"
+      ]
+     },
+     "execution_count": 7,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "np.array(lst)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "id": "24089696",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "list"
+      ]
+     },
+     "execution_count": 8,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "type(lst)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 26,
+   "id": "84699094",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "application/javascript": [
+       "\n",
+       "        if (window._pyforest_update_imports_cell) { window._pyforest_update_imports_cell('import numpy as np'); }\n",
+       "    "
+      ],
+      "text/plain": [
+       "<IPython.core.display.Javascript object>"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[1 2 3 4 5 6 7 8 9]\n"
+     ]
+    },
+    {
+     "data": {
+      "application/javascript": [
+       "\n",
+       "        if (window._pyforest_update_imports_cell) { window._pyforest_update_imports_cell('import numpy as np'); }\n",
+       "    "
+      ],
+      "text/plain": [
+       "<IPython.core.display.Javascript object>"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[1 2 3 4 5 6 7 8 9]\n"
+     ]
+    }
+   ],
+   "source": [
+    "a=np.array([1,2,3,4,5,6,7,8,9])\n",
+    "print(a)\n",
+    "np_array = np.array(a)\n",
+    "a[3]=9\n",
+    "print(np_array)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 27,
+   "id": "4253192a",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "application/javascript": [
+       "\n",
+       "        if (window._pyforest_update_imports_cell) { window._pyforest_update_imports_cell('import numpy as np'); }\n",
+       "    "
+      ],
+      "text/plain": [
+       "<IPython.core.display.Javascript object>"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[1 2 3 0 5 6 7 8 9]\n"
+     ]
+    }
+   ],
+   "source": [
+    "np_asarray = np.asarray(a)\n",
+    "a[3] = 0\n",
+    "print(np_asarray)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "2a634d7d",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.10.9"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
